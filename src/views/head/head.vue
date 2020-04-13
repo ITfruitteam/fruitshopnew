@@ -30,55 +30,21 @@
 
           <q-space />
 
-          <q-input class="GPL__toolbar-input" dense standout="bg-info" name="keywords" id="keyword" v-model="searchWord" placeholder="Search">    
+          <q-input class="GPL__toolbar-input" rounded dense standout="bg-info" name="keywords" id="keyword" v-model="searchWord" placeholder="Search">    
             <template v-slot:prepend>
               <q-icon v-if="searchWord === ''" name="search" />
               <q-icon v-else name="clear" class="cursor-pointer" @click="searchWord = ''" />
             </template>
           </q-input>
 
-          
-        <!-- <q-menu anchor="top right" self="top right">
-            <q-list class="text-grey-8" style="min-width: 100px">
-            <q-item aria-hidden="true">
-                <q-item-section class="text-uppercase text-grey-7" style="font-size: 0.7rem">Create New
-                </q-item-section>
-            </q-item>
-            <q-item v-for="menu in createMenu" :key="menu.text" clickable v-close-popup aria-hidden="true">
-                <q-item-section avatar>
-                <q-icon :name="menu.icon" />
-                </q-item-section>
-                <q-item-section>{{ menu.text }}</q-item-section>
-            </q-item>
-            </q-list>
-        </q-menu> -->
-
-          <q-btn @click="searchSubmit" size="15px" flat dense no-wrap color="primary" icon="search" no-caps label="搜素"
+          <q-btn @click="searchSubmit" outline rounded size="13px" color="primary" icon="search" label="搜索"
             class="q-ml-sm q-px-md" />
 
           <q-space />
 
-          
-          <!-- <div class="q-gutter-sm row items-center no-wrap">
-            <q-btn round dense flat color="text-grey-7" icon="apps">
-              <q-tooltip>Google Apps</q-tooltip>
-            </q-btn>
-            <q-btn round dense flat color="grey-8" icon="notifications">
-              <q-badge color="red" text-color="white" floating>
-                2
-              </q-badge>
-              <q-tooltip>Notifications</q-tooltip>
-            </q-btn>
-            <q-btn round flat>
-              <q-avatar size="26px">
-                <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-              </q-avatar>
-              <q-tooltip>Account</q-tooltip>
-            </q-btn>
-          </div> -->
           <div class="hd_cart" id="ECS_CARTINFO"  @mouseover="overShopCar" @mouseout="outShopCar">
             <router-link class="tit" :to="'/app/shoppingcart/cart'" target = _blank>
-                   <b class="iconfont">&#xe600;</b>去购物车结算<span><i class="iconfont">&#xe645;</i></span>
+                   <b class="iconfont"><q-icon size='20px' name="local_grocery_store" /></b>去购物车结算<span><i class="iconfont"><q-icon size='20px' name="arrow_drop_down"/></i></span>
                    <em class="num" id="hd_cartnum" style="visibility: visible;">{{goods_list.goods_list.length}}</em></router-link>
                        <div class="list" v-show="showShopCar">
                            <div class="data">
@@ -92,7 +58,7 @@
                            </div>
                            <div class="count">共<span class="red" id="hd_cart_count">{{goods_list.length}}</span>件商品哦~
                                  <p>总价:<span class="red"><em id="hd_cart_total">{{goods_list.totalPrice}}</em></span>
-                                 <router-link class="btn" :to="'/app/shoppingcart/cart'" target = _blank>去结算
+                                 <router-link class="btn" style="background-color: #c2b8e0;" :to="'/app/shoppingcart/cart'" target = _blank>去结算
                                  </router-link>
                                  </p>
                            </div>
@@ -107,247 +73,71 @@
             <q-toolbar-title class="row items-center text-grey-8">
               <img class="q-pl-md"
                 src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg">
-              <span class="q-ml-sm">Photos</span>
+              <span class="q-ml-sm">ITfruit</span>
             </q-toolbar-title>
           </q-toolbar>
 
           <q-list padding>
-            <q-item v-for="link in links1" :key="link.text" clickable class="GPL__drawer-item">
+            <q-item clickable class="GPL__drawer-item">
               <q-item-section avatar>
-                <q-icon :name="link.icon" />
+                <q-icon name="assignment"/>
               </q-item-section>
               <q-item-section>
-                <q-item-label>{{ link.text }}</q-item-label>
+                <!-- <q-item-label>1111</q-item-label> -->
+                <router-link style="font-size:medium;" :to="'/app/home/member/order'">我的订单</router-link>
               </q-item-section>
             </q-item>
 
-            <q-separator class="q-my-md" />
-
-            <q-item v-for="link in links2" :key="link.text" clickable class="GPL__drawer-item">
+            <q-item clickable class="GPL__drawer-item">
               <q-item-section avatar>
-                <q-icon :name="link.icon" />
+                <q-icon name="star"/>
               </q-item-section>
               <q-item-section>
-                <q-item-label>{{ link.text }}</q-item-label>
+                <!-- <q-item-label>1111</q-item-label> -->
+                <router-link style="font-size:medium;" :to="'/app/home/member/collection'">我的收藏</router-link>
               </q-item-section>
             </q-item>
 
-            <q-separator class="q-my-md" />
-
-            <q-item v-for="link in links3" :key="link.text" clickable class="GPL__drawer-item">
+            <q-item clickable class="GPL__drawer-item">
               <q-item-section avatar>
-                <q-icon :name="link.icon" />
+                <q-icon name="add_location"/>
               </q-item-section>
               <q-item-section>
-                <q-item-label>{{ link.text }}</q-item-label>
+                <!-- <q-item-label>1111</q-item-label> -->
+                <router-link style="font-size:medium;" :to="'/app/home/member/receive'">修改收货地址</router-link>
               </q-item-section>
             </q-item>
-
-            <q-separator class="q-my-md" />
-
-            <q-item clickable class="GPL__drawer-item GPL__drawer-item--storage">
-              <q-item-section avatar>
-                <q-icon name="cloud" />
-              </q-item-section>
-              <q-item-section top>
-                <q-item-label>Storage</q-item-label>
-                <q-linear-progress :value="storage" class="q-my-sm" />
-                <q-item-label caption>2.6 GB of 15 GB</q-item-label>
-              </q-item-section>
-            </q-item>
+            
           </q-list>
         </q-scroll-area>
       </q-drawer>
 
       <q-page-container class="GPL__page-container">
-        <router-view />
 
         <q-page-sticky v-if="$q.screen.gt.sm" expand position="left">
           <div class="fit q-pt-xl q-px-sm column">
             <q-btn round flat color="grey-8" stack no-caps size="26px" class="GPL__side-btn">
               <q-icon size="22px" name="photo" />
-              <div class="GPL__side-btn__label">首页</div>
+              <div class="GPL__side-btn__label">
+                <router-link to="/app/home/index">首页</router-link>
+              </div>
             </q-btn>
 
-            <q-btn round flat color="grey-8" stack no-caps size="26px" class="GPL__side-btn">
-              <q-icon size="22px" name="collections_bookmark" />
-              <div class="GPL__side-btn__label">生鲜食品</div>
-            </q-btn>
+            <div v-for="(item,index) in allMenuLabel">
+              <div v-if="item.is_tab">
+                <q-btn round flat color="grey-8" stack no-caps size="26px" class="GPL__side-btn">
+                  <q-icon size="22px" :name="item.icon" />
+                  <div class="GPL__side-btn__label">
+                    <router-link :to="'/app/home/list/'+item.id">{{item.name}}</router-link>
+                  </div>
+                </q-btn>
+              </div>
+            </div>
 
-            <q-btn round flat color="grey-8" stack no-caps size="26px" class="GPL__side-btn">
-              <q-icon size="22px" name="assistant" />
-              <div class="GPL__side-btn__label">酒水饮料</div>
-            </q-btn>
-
-            <q-btn round flat color="grey-8" stack no-caps size="26px" class="GPL__side-btn">
-              <q-icon size="22px" name="group" />
-              <div class="GPL__side-btn__label">蔬菜水果</div>
-            </q-btn>
-
-            <q-btn round flat color="grey-8" stack no-caps size="26px" class="GPL__side-btn">
-              <q-icon size="22px" name="import_contacts" />
-              <div class="GPL__side-btn__label">休闲食品</div>
-            </q-btn>
-
-            <q-btn round flat color="grey-8" stack no-caps size="26px" class="GPL__side-btn">
-                <q-icon size="22px" name="import_contacts" />
-                <div class="GPL__side-btn__label">粮油副食</div>
-            </q-btn>
           </div>
         </q-page-sticky>
       </q-page-container>
     </q-layout>
-
-
-    
-    <div id="header" class="new_header">
-      <div class="hd_bar">
-        <div class="bd_bar_bd cle">
-          <ul class="welcome">
-            <li id="ECS_MEMBERZONE" v-if="userInfo.name">
-              <router-link :to="'/app/home/member/userinfo'">{{userInfo.name}}</router-link>
-              &nbsp;[
-              <a @click="loginOut">退出</a>
-              ]
-            </li>
-            <li id="ECS_MEMBERZONE" v-else>
-              <router-link :to="'/app/login'">请登录</router-link>
-              <s>|</s>
-              <router-link :to="'/app/register'">免费注册</router-link>
-            </li>
-
-          </ul>
-          <ul id="userinfo-bar">
-            <li class="more-menu" @mouseover="isShowVip=true" @mouseout="isShowVip=false"> <a>会员中心</a><i
-                class="iconfont arrow"> </i>
-              <div class="more-bd" :class="{show:isShowVip}">
-                <div class="list">
-                  <router-link :to="'/app/home/member/order'">我的订单</router-link>
-                  <router-link :to="'/app/home/member/collection'">我的收藏</router-link>
-                  <router-link :to="'/app/home/member/receive'">修改收货地址</router-link>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="hd_main cle">
-        <div class="logo">
-          <router-link to="/app/home/index" class="lizi_logo">
-            <img src="../../static/images/head/logo.gif" alt="慕学生鲜商城">
-          </router-link>
-
-        </div>
-        <div class="search_box">
-          <input class="sea_input" type="text" name="keywords" id="keyword" v-model="searchWord">
-          <button class="sea_submit" @click="searchSubmit">搜索</button>
-        </div>
-        <div class="head_search_hot">
-          <span>热搜榜：</span>
-          <router-link v-for="item in hotSearch" :to="'/app/home/search/'+item.keywords" :key="item.keywords">
-            {{item.keywords}}
-          </router-link>
-        </div>
-        <div class="intro">
-          <ul>
-            <li class="no1"><a href="javascript:void(0);" target="_blank">
-                <h4>正品保障</h4>
-                <p>100%正品低价</p>
-              </a></li>
-            <li class="no2"><a href="javascript:void(0);" target="_blank">
-                <h4>30天退换货</h4>
-                <p>购物有保障</p>
-              </a></li>
-            <li class="no3"><a href="javascript:void(0);" target="_blank">
-                <h4>满99就包邮</h4>
-                <p>闪电发货</p>
-              </a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="hd_nav">
-        <div class="hd_nav_bd cle">
-          <div class="main_nav main_nav_hover" id="main_nav">
-            <div class="main_nav_link" @mouseover="overAllmenu" @mouseout="outAllmenu">
-              <a class="meunAll">全部商品分类
-                <i class="iconfont">&#xe643;</i>
-              </a>
-              <div class="main_cata" id="J_mainCata" v-show="showAllmenu">
-                <ul>
-                  <li v-if="item.category_type === 1" class="first" v-for="(item,index) in allMenuLabel"
-                    @mouseover="overChildrenmenu(index)" @mouseout="outChildrenmenu(index)">
-                    <h3 style="">
-                      <router-link :to="'/app/home/list/'+item.id">{{item.name}}</router-link>
-                    </h3>
-                    <div class="J_subCata" id="J_subCata" v-show="showChildrenMenu ===index"
-                      style=" left: 215px; top: 0px;">
-                      <div class="J_subView">
-                        <div v-for="list in item.sub_cat">
-                          <dl>
-                            <dt>
-                              <router-link :to="'/app/home/list/'+list.id">{{list.name}}</router-link>
-                            </dt>
-
-                            <dd>
-                              <router-link v-for="childrenList in list.sub_cat" :key="childrenList.id"
-                                :to="'/app/home/list/'+childrenList.id">{{childrenList.name}}</router-link>
-                            </dd>
-                          </dl>
-                          <div class="clear"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <ul class="sub_nav cle" id="sub_nav">
-            <li>
-              <router-link to="/app/home/index">首页</router-link>
-            </li>
-            <template v-for="(item,index) in allMenuLabel">
-              <li>
-                <div v-if="item.is_tab">
-                  <router-link :to="'/app/home/list/'+item.id">{{item.name}}</router-link>
-                </div>
-              </li>
-            </template>
-
-          </ul>
-          <div class="hd_cart" id="ECS_CARTINFO" @mouseover="overShopCar" @mouseout="outShopCar">
-            <router-link class="tit" :to="'/app/shoppingcart/cart'" target=_blank>
-              <b class="iconfont">&#xe600;</b>去购物车结算<span><i class="iconfont">&#xe645;</i></span>
-              <em class="num" id="hd_cartnum" style="visibility: visible;">{{goods_list.goods_list.length}}</em>
-            </router-link>
-            <div class="list" v-show="showShopCar">
-              <div class="data">
-                <dl v-for="(item,index) in goods_list.goods_list">
-                  <dt>
-                    <router-link :to="'/app/home/productDetail/'+item.goods.id" target=_blank><img
-                        :src="item.goods.goods_front_image"></router-link>
-                  </dt>
-                  <dd>
-                    <h4>
-                      <router-link :to="'/app/home/productDetail/'+item.goods.id" target=_blank>{{item.goods.name}}
-                      </router-link>
-                    </h4>
-                    <p><span class="red">{{item.goods.shop_price}}</span>&nbsp;<i>X</i>&nbsp;{{item.nums}}</p>
-                    <a title="删除" class="iconfont del" @click="deleteGoods(index,item.goods.id)">×</a>
-                  </dd>
-                </dl>
-              </div>
-              <div class="count">共<span class="red" id="hd_cart_count">{{goods_list.length}}</span>件商品哦~
-                <p>总价:<span class="red"><em id="hd_cart_total">{{goods_list.totalPrice}}</em></span>
-                  <router-link class="btn" :to="'/app/shoppingcart/cart'" target=_blank>去结算
-                  </router-link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -372,75 +162,6 @@
         isShowVip: false,
         leftDrawerOpen: false,
         search: '',
-        storage: 0.26,
-        links1: [{
-            icon: 'photo',
-            text: 'Photos'
-          },
-          {
-            icon: 'photo_album',
-            text: 'Albums'
-          },
-          {
-            icon: 'assistant',
-            text: 'Assistant'
-          },
-          {
-            icon: 'people',
-            text: 'Sharing'
-          },
-          {
-            icon: 'book',
-            text: 'Photo books'
-          }
-        ],
-        links2: [{
-            icon: 'archive',
-            text: 'Archive'
-          },
-          {
-            icon: 'delete',
-            text: 'Trash'
-          }
-        ],
-        links3: [{
-            icon: 'settings',
-            text: 'Settings'
-          },
-          {
-            icon: 'help',
-            text: 'Help & Feedback'
-          },
-          {
-            icon: 'get_app',
-            text: 'App Downloads'
-          }
-        ],
-        createMenu: [{
-            icon: 'photo_album',
-            text: 'Album'
-          },
-          {
-            icon: 'people',
-            text: 'Shared Album'
-          },
-          {
-            icon: 'movie',
-            text: 'Movie'
-          },
-          {
-            icon: 'library_books',
-            text: 'Animation'
-          },
-          {
-            icon: 'dashboard',
-            text: 'Collage'
-          },
-          {
-            icon: 'book',
-            text: 'Photo book'
-          }
-        ]
       }
     },
     computed: {
@@ -576,6 +297,7 @@
 </style>
 
 <style scoped lang='scss'>
+  
   html {
     background: #fafafa;
     color: #333;
@@ -690,62 +412,6 @@
 
   .new_header .hd_cart .tit span {
     background-color: #1e9246
-  }
-
-  .hd_cart .tit b {
-    color: #aaa;
-    margin: 0 8px 0 12px;
-    font-size: 16px;
-    cursor: pointer
-  }
-
-  .hd_cart .tit span {
-    position: absolute;
-    right: 0;
-    top: -1px;
-    display: block;
-    width: 34px;
-    height: 28px;
-    padding-top: 7px;
-    background-color: #09c762;
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-    cursor: pointer
-  }
-
-  .hd_cart .tit span i {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    transition: all .3s;
-    -webkit-backface-visibility: hidden
-  }
-
-  .hd_cart .tit em {
-    position: absolute;
-    left: 17px;
-    top: -6px;
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-    border: 2px solid #fff;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    background-color: #09c762;
-    border-radius: 10px;
-    padding: 0 5px;
-    line-height: 16px;
-    visibility: hidden
-  }
-
-  .hd_cart_hover .tit span i {
-    -moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg)
   }
 
   #header.new_header .hd_main {
@@ -1370,8 +1036,8 @@
 
   .hd_cart {
     position: absolute;
-    right: 0;
-    top: 30px;
+    right: 10px;
+    top: 14px;
     z-index: 200
   }
 
@@ -1379,21 +1045,12 @@
     text-decoration: none
   }
 
-  .new_header .hd_cart .tit {
-    border-color: #1e9246
-  }
-
-  .new_header .hd_cart .tit span {
-    background-color: #1e9246
-  }
-
-
-
   .hd_cart .tit {
     display: block;
     width: 168px;
     height: 28px;
     padding-top: 5px;
+    padding-bottom: 30px;
     position: relative;
     z-index: 10;
     background: #f8f8f8;
@@ -1404,7 +1061,7 @@
   }
 
   .hd_cart .tit b {
-    color: #aaa;
+    color:#aaa;
     margin: 0 8px 0 12px;
     font-size: 16px;
     cursor: pointer
@@ -1416,9 +1073,9 @@
     top: -1px;
     display: block;
     width: 34px;
-    height: 28px;
+    height: 35px;
     padding-top: 7px;
-    background-color: #09c762;
+    background-color: #d8cbfd;
     text-align: center;
     font-size: 12px;
     color: #fff;
@@ -1636,7 +1293,7 @@
     right: 10px;
     border-radius: 0;
     border: 0;
-    padding: 5px 15px 7px;
+    padding: 5px 15px 20px;
     font-size: 14px;
     background: #09c762;
     color: #fff;
