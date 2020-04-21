@@ -83,7 +83,6 @@
                 <q-icon name="assignment"/>
               </q-item-section>
               <q-item-section>
-                <!-- <q-item-label>1111</q-item-label> -->
                 <router-link style="font-size:medium;" :to="'/app/home/member/order'">我的订单</router-link>
               </q-item-section>
             </q-item>
@@ -93,7 +92,6 @@
                 <q-icon name="star"/>
               </q-item-section>
               <q-item-section>
-                <!-- <q-item-label>1111</q-item-label> -->
                 <router-link style="font-size:medium;" :to="'/app/home/member/collection'">我的收藏</router-link>
               </q-item-section>
             </q-item>
@@ -103,7 +101,6 @@
                 <q-icon name="add_location"/>
               </q-item-section>
               <q-item-section>
-                <!-- <q-item-label>1111</q-item-label> -->
                 <router-link style="font-size:medium;" :to="'/app/home/member/receive'">修改收货地址</router-link>
               </q-item-section>
             </q-item>
@@ -137,6 +134,9 @@
           </div>
         </q-page-sticky>
       </q-page-container>
+      
+      <router-view></router-view>
+
     </q-layout>
   </div>
 </template>
