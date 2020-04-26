@@ -188,6 +188,6 @@
 <style  lang='scss'>
 .maincon {
     width: 970px;
-    float: right;
+    float: left;
 }
 </style>

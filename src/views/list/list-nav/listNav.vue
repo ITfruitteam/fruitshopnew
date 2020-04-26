@@ -159,7 +159,7 @@ canvas {
 .here{padding:5px 0;color:#bbb}
 .here i.iconfont{font-size:14px}
 .here h1{display:inline;font-size:12px;color:#333;font-weight:normal}
-.sidebar{width:214px;float:left}
+.sidebar{width:254px;float:left;margin-left: 150px;margin-right: 10px;}
 .cate-menu{margin-bottom:12px;background-color:#fff}
 .cate-menu h3{border:1px solid #ddd}
 .cate-menu h3 a{display:block;height:26px;padding:14px 0 12px 12px;background-color:#fff;position:relative}

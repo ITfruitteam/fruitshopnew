@@ -25,7 +25,7 @@
             </div>
                 <div class="series_pic">
                     <router-link :to="'/app/home/productDetail/'+items.ad_goods.id" target = _blank>
-                       <img :src="items.ad_goods.goods_front_image" width="340" height="400">
+                       <img :src="items.ad_goods.goods_front_image" width="340" height="360">
                     </router-link>
                 </div>
 
@@ -166,13 +166,14 @@ canvas {
 }
 .series_list .series_pic {
     width:340px;
+    height:350px;
     float:left;
     overflow:hidden;
     margin-right:-10px
 }
 .series_list .series_pic img {
     width:340px;
-    height:400px;
+    height:350px;
     vertical-align:top;
     -webkit-transition:all 4s;
     -moz-transition:all 4s;
@@ -186,7 +187,7 @@ canvas {
 }
 .series_list .pro_list {
     width:654px;
-    height:398px;
+    height:360px;
     overflow:hidden;
     float:right;
     border:1px solid #ccc
@@ -198,11 +199,11 @@ canvas {
 .series_list .pro_list li {
     float:left;
     _display:inline;
-    width:179px;
+    width:217px;
     height:179px;
     border-right:1px solid #ccc;
     border-bottom:1px solid #ccc;
-    padding:10px 20px;
+    /* padding:10px 20px; */
     overflow:hidden
 }
 .series_list .pro_list li .pic {
@@ -216,9 +217,9 @@ canvas {
 .series_list .pro_list li h3 {
     color:#666;
     height:18px;
-    overflow:hidden;
+    /* overflow:hidden; */
     font-size:12px;
-    margin:10px 0 5px
+    margin:5px 5px 12px
 }
 .series_list .pro_list li .price {
     color:#09c762;
@@ -238,7 +239,7 @@ canvas {
 }
 .series_info {
     width:200px;
-    height:399px;
+    height:360px;
     border-bottom:1px solid #ccc;
     float:left;
     overflow:hidden
