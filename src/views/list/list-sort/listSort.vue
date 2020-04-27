@@ -126,7 +126,7 @@ canvas {
 
 .sort {
     margin-bottom: 10px;
-    height: 30px;
+    height: 50px;
     border: 1px solid #eee;
     border-bottom: 2px solid #ccc;
     padding: 5px 0;
@@ -137,7 +137,7 @@ canvas {
 
 
 .sort .bd{float:left;font-size:0;padding-right:12px}
-.sort .bd a{display:inline-block;font-size:12px;margin-right:-1px;+margin-right:-2px;position:relative;z-index:1}
+.sort .bd a{display:inline-block;padding-top: 15px; font-size:12px;margin-right:-1px;+margin-right:-2px;position:relative;z-index:1}
 .sort .bd a span{display:block;padding:5px 26px 5px 15px;background-position:right -128px;+background-position:right -127px}
 .sort .curr .search_DESC{border:1px solid #fff;padding:4px 26px 4px 15px;background-position:right -104px;+background-position:right -102px;color:#09c762;text-shadow:1px 1px 1px #fff}
 .sort .curr .search_ASC{border:1px solid #fff;padding:4px 26px 4px 15px;background-position:right -330px;+background-position:right -328px;color:#09c762;text-shadow:1px 1px 1px #fff}

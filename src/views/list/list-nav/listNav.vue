@@ -162,7 +162,7 @@ canvas {
 .sidebar{width:254px;float:left;margin-left: 150px;margin-right: 10px;}
 .cate-menu{margin-bottom:12px;background-color:#fff}
 .cate-menu h3{border:1px solid #ddd}
-.cate-menu h3 a{display:block;height:26px;padding:14px 0 12px 12px;background-color:#fff;position:relative}
+.cate-menu h3 a{display:block;height:66px;padding:14px 0 12px 12px;background-color:#fff;position:relative}
 .cate-menu h3 a:hover{background-color:#fafafa;text-decoration:none}
 .cate-menu h3 strong{font-size:18px;color:#333;letter-spacing:3px;font-weight:400}
 .cate-menu h3 i{position:absolute;right:10px;top:23px;color:#999;font-size:12px}

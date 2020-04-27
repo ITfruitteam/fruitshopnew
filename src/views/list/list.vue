@@ -1,10 +1,10 @@
 <template>
     <div id="wrapper">
-        <current-loc :curLoc="curLoc"></current-loc>
+        <!-- <current-loc :curLoc="curLoc"></current-loc> -->
         <div class="main cle">
             <list-nav :currentCategoryName="currentCategoryName" :cateMenu="cateMenu" :proNum="proNum" :isObject="isObject" @on-change="changeMenu"></list-nav>
             <div class="maincon">
-                <price-range :priceRange="priceRange" @on-change="changePrice"></price-range>
+                <!-- <price-range :priceRange="priceRange" @on-change="changePrice"></price-range> -->
                 <list-sort @on-sort="changeSort" :proNum="proNum"></list-sort>
                 <div class="list-detail">
                     <product-list  :listData="listData"></product-list>

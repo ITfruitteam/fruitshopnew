@@ -37,7 +37,7 @@
         <div class="item-info" id="item-info">
           <dl class="loaded">
             <dt class="product_name">
-            <h1>{{proDetail.name}}</h1>
+            <h1 style="font-weight: bold;">{{proDetail.name}}</h1>
             <p class="desc"><span class="gray">{{proDetail.goods_brief}}</span></p>
             </dt>
             <dd class="property">
@@ -73,12 +73,12 @@
                 </li>
                 <li class="add_cart_li">
                   <a class="btn" id="buy_btn" @click="addShoppingCart">
-                    <i class="iconfont">&#xe600;</i>
+                    <i class="iconfont"><q-icon size='20px' name="local_grocery_store" /></i>
                     加入购物车</a>
                   <a v-if="hasFav" id="fav-btn" class="graybtn" @click="deleteCollect">
-                    <i class="iconfont">&#xe613;</i>已收藏</a>
+                    <i class="iconfont"><q-icon size='20px' name="star" /></i>已收藏</a>
                   <a v-else class="graybtn" @click="addCollect">
-                    <i class="iconfont">&#xe613;</i>收藏</a>
+                    <i class="iconfont"><q-icon size='20px' name="star" /></i>收藏</a>
                 </li>
               </ul>
             </dd>
@@ -677,7 +677,7 @@
 
   .item-thumbs {
     padding: 15px 0;
-    height: 58px;
+    height: 78px;
     overflow: hidden;
     position: relative
   }
@@ -985,7 +985,7 @@
     float: left;
     display: block;
     width: 66px;
-    height: 14px;
+    height: 30px;
     padding: 8px 0;
     line-height: 14px;
     border: 0;
@@ -1012,9 +1012,13 @@
     margin-bottom: 5px
   }
 
+  .add_cart_li a{
+    height: 40px;
+  }
+
   .tobuy-box .add_cart_li .btn, .tobuy-box .add_cart_li .graybtn {
     font-size: 16px;
-    padding: 10px 20px 12px
+    padding: 10px 20px 12px 
   }
 
   .tobuy-box .add_cart_li .graybtn {
