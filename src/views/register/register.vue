@@ -3,10 +3,11 @@
 <div style="margin-top:0px;background: url(../../static/images/register/loginBg1.jpg)no-repeat">
 <div class="c-box bg-box" >
     <div class="login-box clearfix"style="margin-top:10px">
-
+        
         <div class="fr form-box">
+            <router-link tag="a" :to="'/app/home/index'" class="indexhead"> 网站首页</router-link>
             <div class="tab">
-                <h2 class="active">手机注册</h2>
+                <h1 class="active">手机注册</h1>
 
             </div>
             <div class="tab-form">
@@ -131,7 +132,10 @@ export default{
     overflow:hidden;
 }
 .bg-box{
-    background:url(../../static/images/register/loginBg1.jpg) no-repeat center center;
+    margin-top: 50px;
+    background:url(../../static/images/login/ynubackground.png);
+    background-size: cover;
+    padding: 20px;
 }
 .login-box{
     width:853px;
@@ -242,30 +246,31 @@ export default{
 }
 .form-box{
     position:relative;
-    width:290px;
-    height: 472px;
+    width:390px;
+    height: 572px;
     padding:0 40px;
     background:#fff;
     color:#666;
+    padding-top: 40px;
 }
 .form-box > h2,
 .form-box > .tab{
-    height:54px;
+    height:64px;
     line-height:54px;
     margin-bottom:34px;
     font-size:18px;
-    font-weight:normal;
+    font-weight:bold;
     color:#333;
     border-bottom:1px solid #eaeaea;
 }
-.form-box > .tab > h2{
+.form-box > .tab > h1{
     float:left;
     width:90px;
     height:53px;
     line-height:53px;
     cursor: pointer;
     font-weight:normal;
-    text-align:center;
+    /* text-align:center; */
 }
 /*.form-box > .tab > h2.active{*/
     /*border-bottom:3px solid #6ec55a;*/
@@ -279,7 +284,7 @@ export default{
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    overflow:hidden;
+    overflow:hidden;margin: 10px;
 }
 .form-group > label{
     float:left;
@@ -334,6 +339,8 @@ export default{
     float:left;
     width:103px;
     margin-left:3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     height:38px;
     line-height:38px;
     border:1px solid #dedede;

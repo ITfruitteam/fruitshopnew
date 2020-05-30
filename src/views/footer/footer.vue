@@ -1,6 +1,6 @@
 <template>
 <div id="footer">
-    <div class="ft-bg">
+    <!-- <div class="ft-bg">
         <div class="w-ensure mb20">
             <div class="w-main">
                 <ul>
@@ -27,7 +27,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 </template>
 <script>

@@ -1,8 +1,10 @@
 <template>
   <div>
+    
     <div class="c-box bg-box" >
       <div class="login-box clearfix"style="margin-top:10px">
         <div class="fr form-box">
+          <router-link tag="a" :to="'/app/home/index'" class="indexhead"> 网站首页</router-link>
           <h2>帐号登录</h2>
           <form id="jsLoginForm" autocomplete="off">
 
@@ -168,7 +170,10 @@
     overflow:hidden;
   }
   .bg-box{
-    background:url(../../static/images/login/loginBg1.jpg) no-repeat center center;
+    margin-top: 50px;
+    background:url(../../static/images/login/ynubackground.png);
+    background-size: cover;
+    padding: 20px;
   }
   .login-box{
     width:853px;
@@ -302,11 +307,12 @@
   }
   .form-box{
     position:relative;
-    width:290px;
-    height: 472px;
+    width:390px;
+    height: 572px;
     padding:0 40px;
     background:#fff;
     color:#666;
+    padding-top: 40px;
   }
   .form-box > h2,
   .form-box > .tab{
