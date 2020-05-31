@@ -4,11 +4,11 @@
             <div class="box">
                 <div class="box_1">
                     <div class="userCenterBox boxCenterList clearfix" style="_height:1%;">
-                        <h5><span>我的订单</span></h5>
+                        <h1 style="font-weight: bolder;"><span>我的订单</span></h1>
                         <div class="blank"></div>
                         <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
                             <tbody>
-                                <tr align="center">
+                                <tr align="center" style="font-size: 15px;">
                                     <td bgcolor="#ffffff">订单号</td>
                                     <td bgcolor="#ffffff">下单时间</td>
                                     <td bgcolor="#ffffff">订单总金额</td>
@@ -212,7 +212,8 @@ canvas {
 }
 
 .my_nala_centre {
-    float:right;
+    float:left;
+    margin-left: 20px;
     width:970px;
     background-color:#fff
 }

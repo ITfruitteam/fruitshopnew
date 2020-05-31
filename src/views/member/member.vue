@@ -1,6 +1,6 @@
 <template>
     <div id="wrapper" class="cle">
-        <div class="here cle">
+        <div class="here cle" style="margin-left:11%">
             <a href="" @click="toIndex">首页</a>
             <code>></code>
             用户中心

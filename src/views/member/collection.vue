@@ -5,7 +5,7 @@
             <div class="box_1">
                 <div class="userCenterBox boxCenterList clearfix" style="_height:1%; font-size:14px;">
 
-                    <h5><span>我的收藏</span></h5>
+                    <h1 style="font-weight: bolder;"><span>我的收藏</span></h1>
                     <div class="blank"></div>
                     <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
                       <tbody>
@@ -170,7 +170,8 @@
 }
 
 .my_nala_centre {
-    float:right;
+    float:left;
+    margin-left: 20px;
     width:970px;
     background-color:#fff
 }

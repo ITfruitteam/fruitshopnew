@@ -4,7 +4,7 @@
             <div class="box">
                 <div class="box_1">
                     <div class="userCenterBox boxCenterList clearfix" style="_height:1%;">
-                        <h5><span>收货人信息</span></h5>
+                        <h1 style="font-weight:bolder"><span>收货人信息</span></h1>
                         <div class="blank"></div>
                         <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" v-for="(item, index) in receiveInfoArr">
                             <tbody>
@@ -214,8 +214,13 @@ import {getAddress, addAddress, updateAddress, delAddress} from '../../api/api'
 .error{
   color:#fa8341;
 }
+input{
+    font-size: medium;
+}
 table {
     margin-bottom: 20px;
+    height: 250px;
+    font-size: medium;
 }
 select {
     min-width: 80px;
@@ -239,7 +244,8 @@ select {
 }
 
 .my_nala_centre {
-    float:right;
+    float:left;
+    margin-left: 20px;
     width:970px;
     background-color:#fff
 }
@@ -326,7 +332,7 @@ select {
 .bnt_blue_1,.bnt_blue,.bnt_bonus,.bnt_blue_2 {
     display:inline-block;
     padding:4px 12px;
-    height:24px;
+    height:30px;
     line-height:16px;
     _line-height:18px;
     border:1px solid #1e9246;

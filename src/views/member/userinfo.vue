@@ -5,7 +5,7 @@
             <div class="box">
                 <div class="box_1">
                     <div class="userCenterBox boxCenterList clearfix" style="_height:1%;">
-                        <h5><span>个人资料</span></h5>
+                        <h1 style="font-weight:bolder;"><span>个人资料</span></h1>
                         <div class="blank"></div>
                         <form name="formEdit" >
                             <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
@@ -17,7 +17,7 @@
                                     <tr>
                                         <td width="28%" align="right" bgcolor="#FFFFFF">出生日期： </td>
                                         <td width="72%" align="left" bgcolor="#FFFFFF">
-                                            <datepicker language="ch"  v-model="userInfo.birthday"></datepicker>
+                                            <datepicker style="width: 220px;" language="ch"  v-model="userInfo.birthday"></datepicker>
                                         </td>
                                     </tr>
                                     <tr>
@@ -104,10 +104,17 @@ import {getUserDetail, updateUserInfo} from '../../api/api'
 </script>
 <style scoped>
 
-
-
+table {
+    margin-bottom: 20px;
+    height: 250px;
+    font-size: medium;
+}
+input{
+    font-size: medium;
+}
 .my_nala_centre {
-    float:right;
+    float:left;
+    margin-left: 20px;
     width:970px;
     background-color:#fff
 }
@@ -194,7 +201,7 @@ import {getUserDetail, updateUserInfo} from '../../api/api'
 .btn_blue_1{
   display: inline-block;
   padding: 4px 12px;
-  height: 24px;
+  height: 30px;
   line-height: 25px;
   _line-height: 18px;
   border: 1px solid #1e9246;

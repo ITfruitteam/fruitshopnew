@@ -84,10 +84,11 @@
 
 .slidebar {
     float:left;
+    margin-left: 160px;
     width:214px
 }
 .slidebar .slide_item {
-+zoom:1;
+    zoom:1;
     border:1px solid #e7e7e7;
     border-bottom:0;
     margin-bottom:10px;
@@ -96,7 +97,7 @@
 .slidebar .root_node {
     border-bottom:solid 1px #e7e7e7;
     padding:14px 0 14px 14px;
-    font-size:14px
+    font-size:16px
 }
 .slidebar .root_node i {
     color:#ccc;
@@ -104,14 +105,17 @@
     font-size:12px
 }
 .slidebar .item ul {
-    border-bottom:solid 1px #e7e7e7
+    border-bottom:solid 1px #e7e7e7;
+    margin-bottom: 20px;
 }
 .slidebar li {
-    margin-bottom:1px
+    margin-bottom: 15px;
 }
 .slidebar li a {
+    /* margin: 5px; */
     display:block;
-    height:20px;
+    height:40px;
+    font-size: 14px;
     line-height:20px;
     padding:10px 0 10px 40px;
     color:#111

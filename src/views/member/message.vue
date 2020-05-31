@@ -4,7 +4,7 @@
       <div class="box">
         <div class="box_1">
           <div class="userCenterBox boxCenterList clearfix" style="_height:1%; font-size:14px;">
-            <h5><span>我的留言</span></h5>
+            <h1 style="font-weight: bolder;"><span>我的留言</span></h1>
             <div class="blank"></div>
             <div class="blank"></div>
             <div class="message-all">
@@ -170,6 +170,14 @@
   }
 </script>
 <style scoped>
+  input{
+    font-size: medium;
+  }
+  table{
+    margin-bottom: 20px;
+    height: 300px;
+    font-size: medium;
+  }
   .message-all {
     border-bottom: 1px solid #ccc;
   }
@@ -180,7 +188,8 @@
   }
 
   .my_nala_centre {
-    float: right;
+    float: left;
+    margin-left: 20px;
     width: 970px;
     background-color: #fff
   }
@@ -284,7 +293,7 @@
   .btn_blue_1 {
     display: inline-block;
     padding: 4px 12px;
-    height: 24px;
+    height: 30px;
     line-height: 25px;
     _line-height: 18px;
     border: 1px solid #1e9246;
